@@ -1,0 +1,59 @@
+# Spark Board Contribution Configuration
+#
+# For more information see:
+# * https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5---3rd-party-Hardware-specification
+# * https://github.com/arduino/Arduino/wiki/Arduino-Hardware-Cores-migration-guide-from-1.0-to-1.6
+#
+
+menu.cpu=Processor
+
+################################################################################
+################################### PFTDeck ####################################
+################################################################################
+pftdeck.name=PFTDeck
+
+pftdeck.upload.tool=avrdude
+pftdeck.upload.protocol=avr109
+pftdeck.upload.maximum_size=28672
+pftdeck.upload.maximum_data_size=2560
+pftdeck.upload.speed=57600
+pftdeck.upload.disable_flushing=true
+pftdeck.upload.use_1200bps_touch=true
+pftdeck.upload.wait_for_upload_port=true
+
+pftdeck.bootloader.tool=avrdude
+pftdeck.bootloader.unlock_bits=0x3F
+pftdeck.bootloader.lock_bits=0x2F
+pftdeck.bootloader.low_fuses=0xFF
+pftdeck.bootloader.high_fuses=0xD8
+
+pftdeck.build.board=AVR_PROMICRO
+pftdeck.build.core=arduino:arduino
+pftdeck.build.variant=promicro
+pftdeck.build.mcu=atmega32u4
+pftdeck.build.usb_product="PFTDeck"
+pftdeck.build.vid=0x1b4f
+pftdeck.build.extra_flags={build.usb_flags}
+
+######################### PFTDeck 3.3V / 8MHz ################################
+pftdeck.menu.cpu.8MHzatmega32U4=ATmega32U4 (3.3V, 8 MHz)
+
+pftdeck.menu.cpu.8MHzatmega32U4.build.pid.0=0x9203
+pftdeck.menu.cpu.8MHzatmega32U4.build.pid.1=0x9204
+pftdeck.menu.cpu.8MHzatmega32U4.build.pid=0x9204
+pftdeck.menu.cpu.8MHzatmega32U4.build.f_cpu=8000000L
+
+pftdeck.menu.cpu.8MHzatmega32U4.bootloader.extended_fuses=0xFE
+pftdeck.menu.cpu.8MHzatmega32U4.bootloader.file=caterina/Caterina-pftdeck8.hex
+
+
+############################# PFTDeck 5V / 16MHz #############################
+pftdeck.menu.cpu.16MHzatmega32U4=ATmega32U4 (5V, 16 MHz)
+
+pftdeck.menu.cpu.16MHzatmega32U4.build.pid.0=0x9205
+pftdeck.menu.cpu.16MHzatmega32U4.build.pid.1=0x9206
+pftdeck.menu.cpu.16MHzatmega32U4.build.pid=0x9206
+pftdeck.menu.cpu.16MHzatmega32U4.build.f_cpu=16000000L
+
+pftdeck.menu.cpu.16MHzatmega32U4.bootloader.extended_fuses=0xCB
+pftdeck.menu.cpu.16MHzatmega32U4.bootloader.file=caterina/Caterina-pftdeck16.hex
