@@ -1,0 +1,28 @@
+{
+  "packages": [
+    {
+      "name": "FPTDeck",
+      "maintainer": "Pocket Fox team",
+      "websiteURL": "https://github.com/pocketfoxteam",
+      "email": "rurigk@gmail.com",
+      "platforms": [
+        {
+          "name": "FPTDeck",
+          "architecture": "avr",
+          "version": "1.1.10",
+          "category": "Contributed",
+          "url": "https://github.com/pocketfoxteam/PFTDeck/raw/master/IDE_Board_Manager/pftdeck.1.1.10.tar.bz2",
+          "archiveFileName": "pftdeck.1.1.10.tar.bz2",
+          "checksum": "SHA-256:a67b0e8cf638218626b6315a282d9c09eec2baf5fef492af482893f652cbeac8",
+          "size": "709341",
+          "boards": [
+            {
+              "name": "FPTDeck"
+            }
+          ],
+          "toolsDependencies": []
+        }
+      ]
+    }
+  ]
+}
